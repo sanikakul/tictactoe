@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Tic Tac Toe</title>
+
+        {% load staticfiles %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'core/lib/bootstrap-3.3.7-dist/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'core/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'core/css/tictactoe-style.css' %}" />
+
+        <script type="application/javascript" src="{% static 'core/lib/jquery-3.2.1.min.js' %}"></script>
+    </head>
+
+    <body>
+        <div class="center-block" style="width: 50%">
+            <h1 class="text-center">Tic Tac Toe</h1>
+            <hr>
+            <br>
+            <div style="background-color: #1b6d85; height: 31vw; width: 31vw;" class="center-block">
+                <div style="background-color: white; height: 10vw; width: 10vw; border-radius: 0 0 10px 0;"></div>
+                <div style="height: 0.5vw; width: 10vw;"></div>
+                <div style="background-color: white; height: 10vw; width: 10vw; border-radius: 0 10px 10px 0;"></div>
+                <div style="height: 0.5vw; width: 10vw;"></div>
+                <div style="background-color: white; height: 10vw; width: 10vw; border-radius: 0 10px 0 0;"></div>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -8,22 +8,48 @@
 
         <link rel="stylesheet" type="text/css" href="{% static 'core/lib/bootstrap-3.3.7-dist/css/bootstrap.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'core/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'core/lib/font-awesome-4.7.0/css/font-awesome.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'core/css/tictactoe-style.css' %}" />
-
         <script type="application/javascript" src="{% static 'core/lib/jquery-3.2.1.min.js' %}"></script>
     </head>
 
     <body>
-        <div class="center-block" style="width: 50%">
+        <div class="main-width center-block">
             <h1 class="text-center">Tic Tac Toe</h1>
             <hr>
             <br>
-            <div style="background-color: #1b6d85; height: 31vw; width: 31vw;" class="center-block">
-                <div style="background-color: white; height: 10vw; width: 10vw; border-radius: 0 0 10px 0;"></div>
-                <div style="height: 0.5vw; width: 10vw;"></div>
-                <div style="background-color: white; height: 10vw; width: 10vw; border-radius: 0 10px 10px 0;"></div>
-                <div style="height: 0.5vw; width: 10vw;"></div>
-                <div style="background-color: white; height: 10vw; width: 10vw; border-radius: 0 10px 0 0;"></div>
+            <div class="grid center-block">
+                <div class="grid-row">
+                    <div class="box top-left">
+                        <div style="height: 100%; width: 100%;" class="text-center">
+                            <i class="fa fa-circle-o" style="color: peru; padding: 15%; font-size: 7vw" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="vertical-div"></div>
+                    <div class="box top-center">
+                        <div style="height: 100%; width: 100%;">
+                            <span class="glyphicon glyphicon-remove" style="color: peru; padding: 15%; font-size: 7vw" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="vertical-div"></div>
+                    <div class="box top-right"></div>
+                </div>
+                <div class="horizontal-div"></div>
+                <div class="grid-row">
+                    <div class="box middle-left"></div>
+                    <div class="vertical-div"></div>
+                    <div class="box middle-center"></div>
+                    <div class="vertical-div"></div>
+                    <div class="box middle-right"></div>
+                </div>
+                <div class="horizontal-div"></div>
+                <div class="grid-row">
+                    <div class="box bottom-left"></div>
+                    <div class="vertical-div"></div>
+                    <div class="box bottom-center"></div>
+                    <div class="vertical-div"></div>
+                    <div class="box bottom-right"></div>
+                </div>
             </div>
         </div>
     </body>

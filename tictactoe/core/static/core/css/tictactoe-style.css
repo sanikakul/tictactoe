@@ -1,7 +1,10 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 h1 {
     color: #1b6d85;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 3.5em;
+    font-size: 4vw;
 }
 
 hr {
@@ -16,24 +19,24 @@ hr {
 
 div .grid {
     background-color: #1b6d85;
-    height: 31vw;
-    width: 31vw;
+    height: 28vw;
+    width: 28vw;
 }
 
 .grid-row {
-    height: 10vw;
+    height: 9vw;
     width: 100%;
 }
 
 .box {
     background-color: white;
     height: 100%;
-    width: 10vw;
+    width: 9vw;
     float: left;
 }
 
 .vertical-div {
-    height: 10vw;
+    height: 9vw;
     width: 0.5vw;
     float: left
 }
@@ -77,4 +80,15 @@ div .grid {
 .horizontal-div {
     height: 0.5vw;
     width: 100%;
+}
+
+.full-size {
+    height: 100%;
+    width: 100%;
+}
+
+.icon-style {
+    color: peru;
+    padding: 20%;
+    font-size: 6vw;
 }

@@ -6,11 +6,13 @@
 
         {% load staticfiles %}
 
+        <script type="application/javascript" src="{% static 'core/lib/jquery-3.2.1.min.js' %}"></script>
+        <script type="application/javascript" src="{% static 'core/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js' %}"></script>
         <link rel="stylesheet" type="text/css" href="{% static 'core/lib/bootstrap-3.3.7-dist/css/bootstrap.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'core/lib/bootstrap-3.3.7-dist/css/bootstrap-theme.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'core/lib/font-awesome-4.7.0/css/font-awesome.min.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'core/css/tictactoe-style.css' %}" />
-        <script type="application/javascript" src="{% static 'core/lib/jquery-3.2.1.min.js' %}"></script>
+        <script type="application/javascript" src="{% static 'core/js/tictactoe.js' %}"></script>
     </head>
 
     <body>
@@ -20,36 +22,39 @@
             <br>
             <div class="grid center-block">
                 <div class="grid-row">
-                    <div class="box top-left">
-                        <div style="height: 100%; width: 100%;" class="text-center">
-                            <i class="fa fa-circle-o" style="color: peru; padding: 15%; font-size: 7vw" aria-hidden="true"></i>
-                        </div>
-                    </div>
+                    <div id="top-left" class="box top-left"></div>
                     <div class="vertical-div"></div>
-                    <div class="box top-center">
-                        <div style="height: 100%; width: 100%;">
-                            <span class="glyphicon glyphicon-remove" style="color: peru; padding: 15%; font-size: 7vw" aria-hidden="true"></span>
-                        </div>
-                    </div>
+                    <div id="top-center" class="box top-center"></div>
                     <div class="vertical-div"></div>
-                    <div class="box top-right"></div>
+                    <div id="top-right" class="box top-right"></div>
                 </div>
                 <div class="horizontal-div"></div>
                 <div class="grid-row">
-                    <div class="box middle-left"></div>
+                    <div id="middle-left" class="box middle-left"></div>
                     <div class="vertical-div"></div>
-                    <div class="box middle-center"></div>
+                    <div id="middle-center" class="box middle-center"></div>
                     <div class="vertical-div"></div>
-                    <div class="box middle-right"></div>
+                    <div id="middle-right" class="box middle-right"></div>
                 </div>
                 <div class="horizontal-div"></div>
                 <div class="grid-row">
-                    <div class="box bottom-left"></div>
+                    <div id="bottom-left" class="box bottom-left"></div>
                     <div class="vertical-div"></div>
-                    <div class="box bottom-center"></div>
+                    <div id="bottom-center" class="box bottom-center"></div>
                     <div class="vertical-div"></div>
-                    <div class="box bottom-right"></div>
+                    <div id="bottom-right" class="box bottom-right"></div>
                 </div>
+            </div>
+            <br>
+            <hr>
+            <div style="width: 100%;">
+                <a id="player-select" style="color: #8c8c8c; font-size: 1em" href="#" data-toggle="popover"
+                   data-trigger="focus" data-content="Some content inside the popover">
+                    <i class="fa fa-user-o" style="color: #8c8c8c;"></i> You First
+                </a>
+                <!--<p style="color: #8c8c8c; font-size: 1em">
+                    <i id="player-select-2" class="fa fa-desktop" style="color: #8c8c8c"></i> App First
+                </p>-->
             </div>
         </div>
     </body>

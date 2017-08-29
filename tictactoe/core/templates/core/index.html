@@ -48,13 +48,21 @@
             <br>
             <hr>
             <div style="width: 100%;">
-                <a id="player-select" style="color: #8c8c8c; font-size: 1em" href="#" data-toggle="popover"
-                   data-trigger="focus" data-content="Some content inside the popover">
-                    <i class="fa fa-user-o" style="color: #8c8c8c;"></i> You First
-                </a>
-                <!--<p style="color: #8c8c8c; font-size: 1em">
-                    <i id="player-select-2" class="fa fa-desktop" style="color: #8c8c8c"></i> App First
-                </p>-->
+                <div class="text-center" style="width: 33%; float: left;">
+                    <div style="font-size: 1.5em;">
+                        <i id="player-user" class="fa fa-user-o" style="color: peru; cursor: pointer;"></i>
+                        &nbsp;
+                        <i id="player-app" class="fa fa-desktop" style="color: #8c8c8c; cursor: pointer;"></i>
+                    </div>
+                </div>
+
+                <div class="text-center" style="width: 33%; float: left;">
+                    <div id="turn-div" style="color: #8c8c8c; font-size: 1.5em; cursor: default;">Your Turn</div>
+                </div>
+
+                <div class="text-center" style="width: 33%; float: left;">
+                    <div id="quit-game" style="color: #8c8c8c; font-size: 1.5em; cursor: pointer; ">Restart Game</div>
+                </div>
             </div>
         </div>
     </body>

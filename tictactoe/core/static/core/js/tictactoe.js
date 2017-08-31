@@ -1,5 +1,9 @@
 var tictactoe = {
 
+    dictionary: {"0": {"0": "top-left", "1": "top-center", "2": "top-right"},
+        "1": {"0": "middle-left", "1": "middle-center", "2": "middle-right"},
+        "2": {"0": "bottom-left", "1": "bottom-center", "2": "bottom-right"}},
+
     createO: function(){
         var $element = $("<div></div>");
         $element.addClass("full-size text-center");
@@ -28,63 +32,72 @@ var tictactoe = {
             var parent = document.getElementById("top-left");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#top-left").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#top-center").click(function(){
             var parent = document.getElementById("top-center");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#top-center").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#top-right").click(function(){
             var parent = document.getElementById("top-right");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#top-right").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#middle-left").click(function(){
             var parent = document.getElementById("middle-left");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#middle-left").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#middle-center").click(function(){
             var parent = document.getElementById("middle-center");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#middle-center").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#middle-right").click(function(){
             var parent = document.getElementById("middle-right");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#middle-right").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#bottom-left").click(function(){
             var parent = document.getElementById("bottom-left");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#bottom-left").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#bottom-center").click(function(){
             var parent = document.getElementById("bottom-center");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#bottom-center").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#bottom-right").click(function(){
             var parent = document.getElementById("bottom-right");
             var child = tictactoe.createX();
             parent.append(child);
-            $("#bottom-right").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
     },
 
@@ -93,63 +106,72 @@ var tictactoe = {
             var parent = document.getElementById("top-left");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#top-left").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#top-center").click(function(){
             var parent = document.getElementById("top-center");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#top-center").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#top-right").click(function(){
             var parent = document.getElementById("top-right");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#top-right").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#middle-left").click(function(){
             var parent = document.getElementById("middle-left");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#middle-left").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#middle-center").click(function(){
             var parent = document.getElementById("middle-center");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#middle-center").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#middle-right").click(function(){
             var parent = document.getElementById("middle-right");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#middle-right").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#bottom-left").click(function(){
             var parent = document.getElementById("bottom-left");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#bottom-left").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#bottom-center").click(function(){
             var parent = document.getElementById("bottom-center");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#bottom-center").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
 
         $("#bottom-right").click(function(){
             var parent = document.getElementById("bottom-right");
             var child = tictactoe.createO();
             parent.append(child);
-            $("#bottom-right").off("click");
+            tictactoe.deInitializeGridClicks();
+            tictactoe.appsTurn();
         });
     },
 
@@ -165,6 +187,17 @@ var tictactoe = {
         $("#bottom-left").off("click");
         $("#bottom-center").off("click");
         $("#bottom-right").off("click");
+    },
+
+    appsTurn: function () {
+        $.ajax({
+            type: 'GET',
+            url: 'apps_turn/',
+            dataType: "json",
+            success: function(data) {
+=            alert(data)
+		}});
+
     }
 };
 
@@ -197,7 +230,7 @@ $(document).ready(function(){
         $turn.textContent = "App's Turn";
 
         tictactoe.deInitializeGridClicks();
-        tictactoe.initializeOs();
+        tictactoe.initializeXs();
     });
 
     $("#quit-game").click(function() {

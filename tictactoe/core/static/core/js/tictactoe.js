@@ -195,7 +195,7 @@ var tictactoe = {
             url: 'apps_turn/',
             dataType: "json",
             success: function(data) {
-=            alert(data)
+            alert(data)
 		}});
 
     }

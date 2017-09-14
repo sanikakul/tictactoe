@@ -190,13 +190,15 @@ var tictactoe = {
     },
 
     appsTurn: function () {
-        $.ajax({
-            type: 'GET',
-            url: 'apps_turn/',
-            dataType: "json",
-            success: function(data) {
+        alert("Here!");
+        $.ajax(
+            {
+                type: 'GET',
+                url: 'apps_turn/'
+            }
+        ).done(function(data) {
             alert(data)
-		}});
+        })
 
     }
 };
@@ -227,7 +229,9 @@ $(document).ready(function(){
         $other.style.color = "#8c8c8c";
 
         var $turn = document.getElementById("turn-div");
-        $turn.textContent = "App's Turn";
+        $turn.textContent = "App's Turn"
+
+        tictactoe.appsTurn();
 
         tictactoe.deInitializeGridClicks();
         tictactoe.initializeXs();
